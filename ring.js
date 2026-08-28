@@ -6,6 +6,8 @@ class GoodInternetting extends HTMLElement {
     const base = script?.src ? new URL(script.src).origin : location.origin;
     const endpoint = this.getAttribute("endpoint") || `${base}/.netlify/functions/feeds`;
     const count = Math.max(1, Math.min(12, Number(this.getAttribute("count") || 5)));
+    const trackedUrl = (destination, kind) =>
+      `${base}/go/${kind}?url=${encodeURIComponent(destination)}`;
 
     root.innerHTML = `
       <style>
@@ -95,14 +97,14 @@ button {
         if (!posts.length) throw new Error("No posts found");
         content.innerHTML = `<ol>${posts.map(p => `
           <li>
-            <a class="title" href="${escapeAttr(p.url)}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>
+            <a class="title" href="${escapeAttr(trackedUrl(p.url, "link"))}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>
             <span class="meta">${escapeHtml(p.member)}${p.date ? ` · ${relativeDate(p.date)}` : ""}</span>
           </li>`).join("")}</ol>`;
         footer.style.display = "flex";
         button.onclick = () => {
           if (!randomPool.length) return;
           const destination = randomPool[Math.floor(Math.random() * randomPool.length)];
-          window.open(destination.url, "_blank", "noopener");
+          window.open(trackedUrl(destination.url, "random"), "_blank", "noopener");
         };
       })
       .catch(err => {

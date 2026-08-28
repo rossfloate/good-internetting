@@ -10,3 +10,15 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=300"
+
+[[redirects]]
+  from = "/go/link"
+  to = "/.netlify/functions/go"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/go/random"
+  to = "/.netlify/functions/go"
+  status = 200
+  force = true

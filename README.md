@@ -1,4 +1,4 @@
-# Good Internetting — v1.13
+# Good Internetting — v1.14
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -75,3 +75,5 @@ v1.5: Added Kaijuville and The Space Boat. The Space Boat uses its public Button
 
 
 v1.11: Random Happy Fun Button only uses posts published in the last 12 months, and only destinations on the curated site's or feed's own domain. No leapfrogging to major external sites.
+
+v1.14: Added privacy-minimal outbound counting. Visible links pass through /go/link and the Random Happy Fun Button through /go/random before an immediate redirect. No cookies, user IDs or database; Netlify's own request logs become the counter. Redirects are restricted to curated site/feed domains so this cannot be used as an open redirect.
