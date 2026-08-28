@@ -23,7 +23,7 @@ class GoodInternetting extends HTMLElement {
         * { box-sizing: border-box; }
         .box { border-block: 1px solid var(--gi-rule); padding: 1rem 0; }
         header { display:flex; gap:1rem; align-items:baseline; justify-content:space-between; margin-bottom:.65rem; }
-        h2 { font: inherit; font-weight: 800; letter-spacing:.02em; margin:0; text-transform:uppercase; }
+        h2 { color:#ff5a00; font: inherit; font-weight: 800; letter-spacing:.02em; margin:0; text-transform:uppercase; }
         .tag { color:var(--gi-muted); font-size:.82em; }
         ol { margin:0; padding:0; list-style:none; }
         li { border-top:1px solid var(--gi-rule); padding:.65rem 0; }
@@ -34,8 +34,8 @@ class GoodInternetting extends HTMLElement {
         footer { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.75rem; }
         button {
           appearance:none;
-          background:#000;
-          border:2px solid #000;
+          background:#ff5a00;
+          border:2px solid #ff5a00;
           border-radius:0;
           color:#fff;
           cursor:pointer;
@@ -51,7 +51,7 @@ class GoodInternetting extends HTMLElement {
         }
         button:hover {
           background:#fff;
-          color:#000;
+          color:#ff5a00;
         }
         .brand { color:var(--gi-muted); font-size:.75em; text-decoration:none; }
         .error { color:var(--gi-muted); font-size:.9em; }
