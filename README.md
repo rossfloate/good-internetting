@@ -1,4 +1,4 @@
-# Good Internetting — v1.15
+# Good Internetting — v1.16
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -79,3 +79,5 @@ v1.11: Random Happy Fun Button only uses posts published in the last 12 months, 
 v1.14: Added privacy-minimal outbound counting. Visible links pass through /go/link and the Random Happy Fun Button through /go/random before an immediate redirect. No cookies, user IDs or database; Netlify's own request logs become the counter. Redirects are restricted to curated site/feed domains so this cannot be used as an open redirect.
 
 v1.15: Added a persistent public exit counter using Netlify Blobs. It starts at zero when first deployed and increments only when somebody clicks a Good Internetting link or the Random Happy Fun Button after this release. The displayed total is therefore a defensible count from deployment onward, not an estimate reconstructed from earlier analytics.
+
+v1.16: Added Lucy Bellwood (lucybellwood.com) using her supplied RSS feed.

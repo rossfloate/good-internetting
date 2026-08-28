@@ -104,5 +104,11 @@
     "publication": "The Space Boat",
     "home": "https://buttondown.com/thespaceboat/",
     "feed": "https://buttondown.com/thespaceboat/rss"
+  },
+  {
+    "name": "Lucy Bellwood",
+    "publication": "Lucy Bellwood",
+    "home": "https://lucybellwood.com/",
+    "feed": "https://lucybellwood.com/feed"
   }
 ]
