@@ -1,4 +1,4 @@
-# Good Internetting — v0.9
+# Good Internetting — v1.0
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -66,3 +66,6 @@ This is important for the starter list: some people have obvious RSS, while a fe
 
 
 The “Show me some good internet” button randomly chooses from up to 10 recent posts from every working feed.
+
+
+v1.0: Added Michele Catalano’s I Have That on Vinyl to the curated neighbourhood. Feed discovery is left to the existing server-side discovery logic.
