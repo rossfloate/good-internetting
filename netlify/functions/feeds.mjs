@@ -133,7 +133,7 @@ async function fetchMember(member) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const xml = await res.text();
     const posts = parseFeed(xml, member, feedUrl);
-    return { member, status: posts.length ? "ok" : "empty", feedUrl, posts: posts.slice(0, 3) };
+    return { member, status: posts.length ? "ok" : "empty", feedUrl, posts: posts.slice(0, 10) };
   } catch (error) {
     return { member, status: "error", feedUrl, error: String(error.message || error), posts: [] };
   }
@@ -148,11 +148,16 @@ export default async (req) => {
     .flatMap(x => x.posts.slice(0, 1))
     .sort((a,b) => (b.date || "").localeCompare(a.date || ""));
 
+  const randomPool = settled
+    .flatMap(x => x.posts.slice(0, 10))
+    .filter(p => p.url);
+
   const body = {
     name: "Good Internetting",
     strapline: "Things worth checking out. When you leave the site, everyone wins.",
     generatedAt: new Date().toISOString(),
     posts,
+    randomPool,
     members: members.map(({name, publication, home}) => ({name, publication, home})),
     ...(debug ? { sources: settled.map(x => ({
       name: x.member.name,

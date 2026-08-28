@@ -1,4 +1,4 @@
-# Good Internetting — v0.8
+# Good Internetting — v0.9
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -63,3 +63,6 @@ This is important for the starter list: some people have obvious RSS, while a fe
 - no recommendation algorithm
 - no tracking
 - if a feed stops working, the rest of the ring still works
+
+
+The “Show me some good internet” button randomly chooses from up to 10 recent posts from every working feed.

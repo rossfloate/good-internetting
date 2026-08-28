@@ -69,7 +69,7 @@ class GoodInternetting extends HTMLElement {
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(data => {
         const posts = (data.posts || []).slice(0, count);
-        const members = data.members || [];
+        const randomPool = data.randomPool || [];
         if (!posts.length) throw new Error("No posts found");
         content.innerHTML = `<ol>${posts.map(p => `
           <li>
@@ -78,9 +78,9 @@ class GoodInternetting extends HTMLElement {
           </li>`).join("")}</ol>`;
         footer.style.display = "flex";
         button.onclick = () => {
-          if (!members.length) return;
-          const destination = members[Math.floor(Math.random() * members.length)];
-          window.open(destination.home, "_blank", "noopener");
+          if (!randomPool.length) return;
+          const destination = randomPool[Math.floor(Math.random() * randomPool.length)];
+          window.open(destination.url, "_blank", "noopener");
         };
       })
       .catch(err => {
