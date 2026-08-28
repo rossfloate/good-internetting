@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Good Internetting: things worth reading from elsewhere on the web.">
+  <title>Good Internetting</title>
+  <style>
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; padding:clamp(24px,6vw,80px);
+      font-family: "Courier New", Courier, monospace;
+      background:#fff; color:#111;
+    }
+    main { max-width:820px; margin:0 auto; }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(48px,10vw,112px); line-height:.82; letter-spacing:-.065em;
+      margin:0 0 28px; max-width:760px;
+    }
+    .intro { font-size:clamp(18px,2.4vw,26px); line-height:1.35; max-width:700px; margin:0 0 56px; }
+    .stamp { display:inline-block; border:2px solid currentColor; padding:.25rem .45rem; transform:rotate(-1.5deg); font-weight:700; }
+    section { margin:56px 0; }
+    h2 { font-size:14px; text-transform:uppercase; letter-spacing:.12em; border-bottom:1px solid #999; padding-bottom:8px; }
+    code, pre { font:inherit; }
+    pre { overflow:auto; border:1px solid #999; padding:16px; background:#f5f5f5; }
+    .tiny { font-size:12px; opacity:.65; }
+    a { color:inherit; }
+    good-internetting { --gi-rule:#999; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="stamp">UNDER CONSTRUCTION, OBVIOUSLY</p>
+    <h1>Good<br>Internetting.</h1>
+    <p class="intro">Things worth checking out. When you leave the site, everyone wins.</p>
+
+    <good-internetting count="8"></good-internetting>
+
+    <section>
+      <h2>Put this on your site</h2>
+      <pre><code>&lt;script src="https://goodinternetting.com/ring.js"&gt;&lt;/script&gt;
+&lt;good-internetting count="5"&gt;&lt;/good-internetting&gt;</code></pre>
+      <p class="tiny">The widget ought to look right on your site, but no guarantees</p>
+    </section>
+
+    <section>
+      <h2>Huh?</h2>
+      <p>A little experiment in Good Internetting. Remember links? They were the whole point. More please.</p>
+    </section>
+  </main>
+  <script src="/ring.js"></script>
+</body>
+</html>

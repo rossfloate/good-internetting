@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Mike Monteiro",
+    "publication": "Mike Monteiro's Good News",
+    "home": "https://buttondown.com/monteiro",
+    "feed": null
+  },
+  {
+    "name": "Sacha Judd",
+    "publication": "what you love matters",
+    "home": "https://newsletter.sachajudd.com/",
+    "feed": null
+  },
+  {
+    "name": "Peter Anderson",
+    "publication": "The Redline",
+    "home": "https://theredline.com.au/",
+    "feed": null
+  },
+  {
+    "name": "Austin Kleon",
+    "publication": "Austin Kleon",
+    "home": "https://austinkleon.com/",
+    "feed": null
+  },
+  {
+    "name": "Kio Stark",
+    "publication": "Kio Stark",
+    "home": "https://www.kiostark.com/",
+    "feed": null
+  },
+  {
+    "name": "Anthony Agius / Cam Wilson",
+    "publication": "The Sizzle",
+    "home": "https://thesizzle.com.au/",
+    "feed": null
+  },
+  {
+    "name": "Dan Hon",
+    "publication": "Things That Caught My Attention",
+    "home": "https://thingsthatcaughtmyattention.com/",
+    "feed": "https://newsletter.danhon.com/rss"
+  },
+  {
+    "name": "Merlin Mann",
+    "publication": "kung fu grippe",
+    "home": "https://www.kungfugrippe.com/",
+    "feed": null
+  },
+  {
+    "name": "John Moltz",
+    "publication": "A Very Nice Website",
+    "home": "https://verynicewebsite.net/",
+    "feed": null
+  },
+  {
+    "name": "Erika Hall",
+    "publication": "Mule Design",
+    "home": "https://www.muledesign.com/blog/",
+    "feed": null
+  },
+  {
+    "name": "Jared Spool",
+    "publication": "Jared Spool / UIE",
+    "home": "https://www.uie.com/",
+    "feed": null
+  },
+  {
+    "name": "Andy Baio",
+    "publication": "Waxy.org",
+    "home": "https://waxy.org/",
+    "feed": "https://waxy.org/feed/"
+  },
+  {
+    "name": "Jason Cosper",
+    "publication": "Jason Cosper",
+    "home": "https://jasoncosper.com/",
+    "feed": null
+  }
+]
