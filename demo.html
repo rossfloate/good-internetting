@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Good Internetting widget demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ececec;
+      color: #111;
+    }
+    .demo-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+    .lede {
+      margin: 0 0 32px;
+      color: #555;
+      max-width: 760px;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .site {
+      min-height: 620px;
+      border: 1px solid #c9c9c9;
+      overflow: hidden;
+      background: #fff;
+    }
+    .site .label {
+      font: 12px/1.2 Arial, Helvetica, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      border-bottom: 1px solid #ddd;
+      color: #666;
+      background: #fafafa;
+    }
+
+    /* Site A: newspaper-ish */
+    .newspaper {
+      font-family: Georgia, "Times New Roman", serif;
+      padding: 22px;
+    }
+    .newspaper .masthead {
+      font-size: 34px;
+      font-weight: 700;
+      border-bottom: 4px double #111;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .newspaper .story-title {
+      font-size: 28px;
+      line-height: 1.05;
+      margin: 0 0 10px;
+    }
+    .newspaper p {
+      line-height: 1.55;
+    }
+    .newspaper good-internetting {
+      margin-top: 34px;
+      --gi-rule: #aaa;
+      --gi-muted: #666;
+    }
+
+    /* Site B: modern blog */
+    .modern {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      padding: 26px;
+      background: #f7f7f7;
+    }
+    .modern .brand {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 70px;
+    }
+    .modern .story-title {
+      font-size: 42px;
+      line-height: .98;
+      letter-spacing: -.04em;
+      margin: 0 0 18px;
+    }
+    .modern p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #444;
+    }
+    .modern good-internetting {
+      display: block;
+      margin-top: 48px;
+      --gi-rule: #bbb;
+      --gi-muted: #777;
+    }
+
+    /* Site C: plain personal site */
+    .plain {
+      font-family: "Courier New", Courier, monospace;
+      padding: 18px;
+    }
+    .plain .home {
+      font-weight: bold;
+      margin-bottom: 26px;
+    }
+    .plain .story-title {
+      font-size: 24px;
+      margin: 0 0 12px;
+    }
+    .plain p {
+      line-height: 1.5;
+    }
+    .plain good-internetting {
+      display: block;
+      margin-top: 30px;
+      --gi-rule: #999;
+      --gi-muted: #666;
+    }
+
+    .note {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #666;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-wrap">
+    <h1>Same widget, three different sites</h1>
+    <p class="lede">Each panel embeds the same <code>&lt;good-internetting&gt;</code> component. The surrounding site changes; the widget inherits the site's type and general tone.</p>
+
+    <div class="grid">
+      <section class="site">
+        <div class="label">Demo A — newspaper-ish</div>
+        <div class="newspaper">
+          <div class="masthead">The Sunday Whatever</div>
+          <h2 class="story-title">A very serious piece about something surprisingly minor</h2>
+          <p>Some body copy goes here to make this feel like a real editorial site rather than a component test.</p>
+          <good-internetting count="4"></good-internetting>
+        </div>
+      </section>
+
+      <section class="site">
+        <div class="label">Demo B — modern blog</div>
+        <div class="modern">
+          <div class="brand">Small Signals</div>
+          <h2 class="story-title">Notes on making the web less grim.</h2>
+          <p>This fake site is deliberately cleaner and more contemporary. The widget is still the exact same thing.</p>
+          <good-internetting count="4"></good-internetting>
+        </div>
+      </section>
+
+      <section class="site">
+        <div class="label">Demo C — plain personal site</div>
+        <div class="plain">
+          <div class="home">jane.example</div>
+          <h2 class="story-title">stuff I have been thinking about</h2>
+          <p>No brand system. No design system. Just a page, some links, and a little Good Internetting at the bottom.</p>
+          <good-internetting count="4"></good-internetting>
+        </div>
+      </section>
+    </div>
+
+    <p class="note">This page is only for demonstration. The actual embed remains just the script plus the custom element.</p>
+  </div>
+
+  <script src="/ring.js"></script>
+</body>
+</html>

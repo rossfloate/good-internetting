@@ -33,11 +33,22 @@ class GoodInternetting extends HTMLElement {
         .meta { color:var(--gi-muted); display:block; font-size:.82em; margin-top:.14rem; }
         footer { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.75rem; }
         button {
-          appearance:none; background:none; border:1px solid var(--gi-rule);
-          border-radius:999px; color:inherit; cursor:pointer; font:inherit;
-          font-size:.85em; padding:.42rem .7rem;
+          appearance:none;
+          background:#000;
+          border:2px solid #000;
+          border-radius:0;
+          color:#fff;
+          cursor:pointer;
+          font-family:"Courier New", Courier, monospace;
+          font-size:.85em;
+          font-weight:bold;
+          padding:.55rem .7rem;
+          text-transform:uppercase;
         }
-        button:hover { border-color:currentColor; }
+        button:hover {
+          background:#fff;
+          color:#000;
+        }
         .brand { color:var(--gi-muted); font-size:.75em; text-decoration:none; }
         .error { color:var(--gi-muted); font-size:.9em; }
       </style>
@@ -45,7 +56,7 @@ class GoodInternetting extends HTMLElement {
         <header><h2>Good Internetting</h2><span class="tag">Serendipity, manually curated.</span></header>
         <div class="content" aria-live="polite">Finding good internet…</div>
         <footer style="display:none">
-          <button type="button">Take me somewhere good</button>
+          <button type="button">Show me some good internet</button>
           <a class="brand" href="${base}" target="_blank" rel="noopener">goodinternetting.com</a>
         </footer>
       </section>`;
