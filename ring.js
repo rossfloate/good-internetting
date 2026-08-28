@@ -53,7 +53,7 @@ class GoodInternetting extends HTMLElement {
         .error { color:var(--gi-muted); font-size:.9em; }
       </style>
       <section class="box" aria-label="Good Internetting">
-        <header><h2>Good Internetting</h2><span class="tag">Serendipity, manually curated.</span></header>
+        <header><h2>Good Internetting</h2><span class="tag">It's the serendipity, stupid!</span></header>
         <div class="content" aria-live="polite">Finding good internet…</div>
         <footer style="display:none">
           <button type="button">Show me some good internet</button>
