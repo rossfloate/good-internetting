@@ -93,5 +93,16 @@
     "name": "I Have That on Vinyl",
     "publication": "I Have That on Vinyl",
     "home": "https://ihavethatonvinyl.com/"
+  },
+  {
+    "name": "Kaijuville",
+    "publication": "Kaijuville",
+    "home": "https://kaijuville.com/"
+  },
+  {
+    "name": "The Space Boat",
+    "publication": "The Space Boat",
+    "home": "https://buttondown.com/thespaceboat/",
+    "feed": "https://buttondown.com/thespaceboat/rss"
   }
 ]

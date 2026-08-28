@@ -1,4 +1,4 @@
-# Good Internetting — v1.4
+# Good Internetting — v1.5
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -69,3 +69,6 @@ The “Show me some good internet” button randomly chooses from up to 10 recen
 
 
 v1.0: Added Michele Catalano’s I Have That on Vinyl to the curated neighbourhood. Feed discovery is left to the existing server-side discovery logic.
+
+
+v1.5: Added Kaijuville and The Space Boat. The Space Boat uses its public Buttondown RSS feed; Kaijuville is left to the existing RSS autodiscovery logic.
