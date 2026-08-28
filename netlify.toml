@@ -22,3 +22,9 @@
   to = "/.netlify/functions/go"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/count"
+  to = "/.netlify/functions/count"
+  status = 200
+  force = true

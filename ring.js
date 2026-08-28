@@ -76,6 +76,13 @@ button {
   line-height:1.15 !important;
   padding:1.05rem 1.25rem !important;
 }
+
+        .exit-count {
+          margin-top:.55rem;
+          font-size:.78em;
+          line-height:1.35;
+          color:var(--gi-muted);
+        }
 </style>
       <section class="box" aria-label="Good Internetting">
         <header><h2>GOOD INTERNETTING LINKS</h2><span class="tag">It's the serendipity, stupid!</span></header>
@@ -83,11 +90,23 @@ button {
         <footer style="display:none">
           <button type="button">GOOD INTERNETTING RANDOM HAPPY FUN BUTTON</button>
         </footer>
-      </section>`;
+      </section>
+      <div class="exit-count" aria-live="polite">Counting successful departures…</div>`;
 
     const content = root.querySelector(".content");
     const footer = root.querySelector("footer");
     const button = root.querySelector("button");
+    const exitCount = root.querySelector(".exit-count");
+
+    fetch(`${base}/count`)
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => {
+        const n = Number(data.total) || 0;
+        exitCount.textContent = `${n.toLocaleString()} ${n === 1 ? "person" : "people"} clicked something and left. Victory has many forms. This is one of them.`;
+      })
+      .catch(() => {
+        exitCount.textContent = "People clicked something and left. Victory has many forms. This is one of them.";
+      });
 
     fetch(endpoint)
       .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })

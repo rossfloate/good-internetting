@@ -1,3 +1,4 @@
+import { incrementCount } from "./_counter.mjs";
 import members from "../../members.json" with { type: "json" };
 
 function hostname(value) {
@@ -30,6 +31,7 @@ function allowedDestination(destination) {
 export default async (req) => {
   const requestUrl = new URL(req.url);
   const destination = requestUrl.searchParams.get("url");
+  const kind = requestUrl.pathname.includes("/random") ? "random" : "link";
 
   if (!destination || !allowedDestination(destination)) {
     return new Response("Nope.", {
@@ -39,6 +41,12 @@ export default async (req) => {
         "cache-control": "no-store"
       }
     });
+  }
+
+  try {
+    await incrementCount(kind);
+  } catch (error) {
+    console.error("Good Internetting exit counter:", error);
   }
 
   return new Response(null, {
