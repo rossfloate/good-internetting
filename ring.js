@@ -40,10 +40,14 @@ class GoodInternetting extends HTMLElement {
           color:#fff;
           cursor:pointer;
           font-family:"Courier New", Courier, monospace;
-          font-size:.85em;
+          font-size:1em;
           font-weight:bold;
-          padding:.55rem .7rem;
+          line-height:1.15;
+          max-width:15rem;
+          padding:.85rem 1.05rem;
+          text-align:left;
           text-transform:uppercase;
+          white-space:normal;
         }
         button:hover {
           background:#fff;
@@ -56,8 +60,7 @@ class GoodInternetting extends HTMLElement {
         <header><h2>Good Internetting</h2><span class="tag">It's the serendipity, stupid!</span></header>
         <div class="content" aria-live="polite">Finding good internet…</div>
         <footer style="display:none">
-          <button type="button">Show me some good internet</button>
-          <a class="brand" href="${base}" target="_blank" rel="noopener">goodinternetting.com</a>
+          <button type="button">Send me to some Good Internet</button>
         </footer>
       </section>`;
 
