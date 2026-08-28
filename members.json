@@ -76,5 +76,17 @@
     "publication": "Jason Cosper",
     "home": "https://jasoncosper.com/",
     "feed": null
+  },
+  {
+    "name": "Ross Floate",
+    "publication": "Ross Floate",
+    "home": "https://rossfloate.com/blog",
+    "feed": "https://rossfloate.com/blog?format=rss"
+  },
+  {
+    "name": "Ross Floate",
+    "publication": "Good Pies",
+    "home": "https://good-pies.com/",
+    "feed": "https://good-pies.com/feed/"
   }
 ]
