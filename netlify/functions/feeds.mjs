@@ -11,6 +11,34 @@ const parser = new XMLParser({
 
 const UA = "GoodInternetting/0.1 (+https://goodinternetting.com)";
 const COMMON_FEEDS = ["feed/", "rss/", "rss", "feed.xml", "atom.xml"];
+const RANDOM_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+
+function hostname(url) {
+  try { return new URL(url).hostname.toLowerCase().replace(/^www\./, ""); }
+  catch { return ""; }
+}
+
+function sameHostFamily(a, b) {
+  const left = hostname(a);
+  const right = hostname(b);
+  if (!left || !right) return false;
+  return left === right || left.endsWith(`.${right}`) || right.endsWith(`.${left}`);
+}
+
+function eligibleForRandom(post) {
+  if (!post?.url || !post?.date) return false;
+
+  const published = Date.parse(post.date);
+  if (!Number.isFinite(published)) return false;
+
+  const age = Date.now() - published;
+  if (age < 0 || age > RANDOM_MAX_AGE_MS) return false;
+
+  // A post may live on the curated site's domain or its feed provider/domain,
+  // but never leapfrog straight to an unrelated external destination.
+  return sameHostFamily(post.url, post.memberUrl) ||
+         sameHostFamily(post.url, post.feedUrl);
+}
 
 function arr(value) {
   if (!value) return [];
@@ -150,11 +178,11 @@ export default async (req) => {
 
   const randomPool = settled
     .flatMap(x => x.posts.slice(0, 10))
-    .filter(p => p.url);
+    .filter(eligibleForRandom);
 
   const body = {
     name: "Good Internetting",
-    strapline: "Things worth checking out. Click a link, or takes yer chances with the big ugly mystery button. Now get outta here, you scamp!",
+    strapline: "Things worth checking out. Click a link, or takes yer chances with the big orange mystery button. Now get outta here, you scamp!",
     generatedAt: new Date().toISOString(),
     posts,
     randomPool,

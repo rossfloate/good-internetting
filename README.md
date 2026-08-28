@@ -1,4 +1,4 @@
-# Good Internetting — v1.10
+# Good Internetting — v1.11
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -72,3 +72,6 @@ v1.0: Added Michele Catalano’s I Have That on Vinyl to the curated neighbourho
 
 
 v1.5: Added Kaijuville and The Space Boat. The Space Boat uses its public Buttondown RSS feed; Kaijuville is left to the existing RSS autodiscovery logic.
+
+
+v1.11: Random Happy Fun Button only uses posts published in the last 12 months, and only destinations on the curated site's or feed's own domain. No leapfrogging to major external sites.
