@@ -67,12 +67,19 @@ class GoodInternetting extends HTMLElement {
           border-color: #ff5a00;
           color: #ff5a00;
         }
-      </style>
+      
+button {
+  max-width:22rem !important;
+  font-size:1.15em !important;
+  line-height:1.15 !important;
+  padding:1.05rem 1.25rem !important;
+}
+</style>
       <section class="box" aria-label="Good Internetting">
-        <header><h2>Good Internetting</h2><span class="tag">It's the serendipity, stupid!</span></header>
+        <header><h2>GOOD INTERNETTING LINKS</h2><span class="tag">It's the serendipity, stupid!</span></header>
         <div class="content" aria-live="polite">Finding good internet…</div>
         <footer style="display:none">
-          <button type="button">Send me to some Good Internet</button>
+          <button type="button">GOOD INTERNETTING RANDOM HAPPY FUN BUTTON</button>
         </footer>
       </section>`;
 
