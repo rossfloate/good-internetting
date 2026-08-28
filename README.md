@@ -1,4 +1,4 @@
-# Good Internetting — v1.3
+# Good Internetting — v1.4
 
 A deliberately small embeddable widget for lateral movement around the open web.
 

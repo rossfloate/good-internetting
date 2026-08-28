@@ -154,7 +154,7 @@ export default async (req) => {
 
   const body = {
     name: "Good Internetting",
-    strapline: "Things worth checking out. Click a link, or takes yer chances with the mystery button. As long as you leave this page, everyone wins.",
+    strapline: "Things worth checking out. Click a link, or takes yer chances with the big ugly mystery button. Now get outta here, you scamp!",
     generatedAt: new Date().toISOString(),
     posts,
     randomPool,
