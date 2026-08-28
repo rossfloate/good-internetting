@@ -5,7 +5,8 @@ const parser = new XMLParser({
   ignoreAttributes: false,
   attributeNamePrefix: "@_",
   textNodeName: "#text",
-  trimValues: true
+  trimValues: true,
+  processEntities: false
 });
 
 const UA = "GoodInternetting/0.1 (+https://goodinternetting.com)";
@@ -16,10 +17,22 @@ function arr(value) {
   return Array.isArray(value) ? value : [value];
 }
 
+function decodeEntities(value = "") {
+  return String(value)
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, "\u00a0");
+}
+
 function text(value) {
   if (value == null) return "";
-  if (typeof value === "string" || typeof value === "number") return String(value);
-  if (typeof value === "object") return value["#text"] || value["@_href"] || "";
+  if (typeof value === "string" || typeof value === "number") return decodeEntities(value);
+  if (typeof value === "object") return decodeEntities(value["#text"] || value["@_href"] || "");
   return "";
 }
 

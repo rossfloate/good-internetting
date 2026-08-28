@@ -3,13 +3,13 @@
     "name": "Mike Monteiro",
     "publication": "Mike Monteiro's Good News",
     "home": "https://buttondown.com/monteiro",
-    "feed": null
+    "feed": "https://buttondown.com/monteiro/rss"
   },
   {
     "name": "Sacha Judd",
     "publication": "what you love matters",
     "home": "https://newsletter.sachajudd.com/",
-    "feed": null
+    "feed": "https://newsletter.sachajudd.com/rss"
   },
   {
     "name": "Peter Anderson",
@@ -61,9 +61,9 @@
   },
   {
     "name": "Jared Spool",
-    "publication": "Jared Spool / UIE",
-    "home": "https://www.uie.com/",
-    "feed": null
+    "publication": "UIE / All You Can Learn",
+    "home": "https://aycl.uie.com/blog/previewall/filtering",
+    "feed": "https://aycl.uie.com/blog/rss"
   },
   {
     "name": "Andy Baio",
