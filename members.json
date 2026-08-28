@@ -110,5 +110,11 @@
     "publication": "Lucy Bellwood",
     "home": "https://lucybellwood.com/",
     "feed": "https://lucybellwood.com/feed"
+  },
+  {
+    "name": "Ron Bronson",
+    "publication": "Ron Bronson",
+    "home": "https://blog.ronbronson.com/",
+    "feed": "https://blog.ronbronson.com/feed.rss"
   }
 ]

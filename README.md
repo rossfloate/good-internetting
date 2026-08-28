@@ -1,4 +1,4 @@
-# Good Internetting — v1.16
+# Good Internetting — v1.18
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -81,3 +81,7 @@ v1.14: Added privacy-minimal outbound counting. Visible links pass through /go/l
 v1.15: Added a persistent public exit counter using Netlify Blobs. It starts at zero when first deployed and increments only when somebody clicks a Good Internetting link or the Random Happy Fun Button after this release. The displayed total is therefore a defensible count from deployment onward, not an estimate reconstructed from earlier analytics.
 
 v1.16: Added Lucy Bellwood (lucybellwood.com) using her supplied RSS feed.
+
+v1.17: Added Ron Bronson (blog.ronbronson.com). The site advertises RSS; feed discovery is left to the existing RSS autodiscovery rather than inventing a feed URL.
+
+v1.18: Ron Bronson now uses the site's explicit RSS feed: https://blog.ronbronson.com/feed.rss
