@@ -1,4 +1,4 @@
-# Good Internetting — v1.18
+# Good Internetting — v1.19
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -85,3 +85,61 @@ v1.16: Added Lucy Bellwood (lucybellwood.com) using her supplied RSS feed.
 v1.17: Added Ron Bronson (blog.ronbronson.com). The site advertises RSS; feed discovery is left to the existing RSS autodiscovery rather than inventing a feed URL.
 
 v1.18: Ron Bronson now uses the site's explicit RSS feed: https://blog.ronbronson.com/feed.rss
+
+
+## Make your own
+
+Want a living blogroll of your own? Fork this repo and change the list.
+
+Good Internetting doesn't scrape websites. It reads RSS and Atom feeds and sends people back to the original posts.
+
+### 1. Fork this repo
+
+Hit **Fork** up there somewhere.
+
+### 2. Edit `members.json`
+
+That's the list of sites.
+
+Each one looks roughly like this:
+
+```json
+{
+  "name": "Lucy Bellwood",
+  "publication": "Lucy Bellwood",
+  "home": "https://lucybellwood.com/",
+  "feed": "https://lucybellwood.com/feed"
+}
+```
+
+Add the sites you like. Delete the ones you don't.
+
+If you know the RSS or Atom feed URL, put it in. If you don't, Good Internetting will have a crack at finding one.
+
+**We don't scrape. We just amplify RSS.**
+
+### 3. Put it somewhere
+
+The easiest option is Netlify. Connect your fork and deploy it. There's no build command or database to set up.
+
+Once it's running, your widget looks like this:
+
+```html
+<script src="https://YOUR-SITE/ring.js"></script>
+<good-internetting count="5"></good-internetting>
+```
+
+Change `5` to however many links you want. I'm not the boss of your website.
+
+### 4. That's it
+
+Your site now shows recent things from sites **you chose**, with a big dumb random button for going somewhere unexpected.
+
+No accounts. No recommendation algorithm. No engagement optimisation.
+
+Just links.
+
+**If you make one, tell me. I want to see where these things end up.**
+
+
+v1.19: README now includes a short fork-it-and-make-your-own guide for people who want their own curated RSS blogroll.
