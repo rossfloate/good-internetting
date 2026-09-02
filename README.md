@@ -1,4 +1,4 @@
-# Good Internetting — v1.19
+# Good Internetting — v1.20
 
 A deliberately small embeddable widget for lateral movement around the open web.
 
@@ -143,3 +143,5 @@ Just links.
 
 
 v1.19: README now includes a short fork-it-and-make-your-own guide for people who want their own curated RSS blogroll.
+
+v1.20: Added the small “Get your own Good Internetting dingus.” maker’s-mark footer to every widget.

@@ -83,6 +83,17 @@ button {
           line-height:1.35;
           color:var(--gi-muted);
         }
+        .get-your-own {
+          margin-top:.3rem;
+          font-size:.68em;
+          line-height:1.3;
+          color:var(--gi-muted);
+        }
+        .get-your-own a {
+          color:inherit;
+          text-decoration:underline;
+          text-underline-offset:.12em;
+        }
 </style>
       <section class="box" aria-label="Good Internetting">
         <header><h2>GOOD INTERNETTING LINKS</h2><span class="tag">It's the serendipity, stupid!</span></header>
@@ -91,7 +102,8 @@ button {
           <button type="button">GOOD INTERNETTING RANDOM HAPPY FUN BUTTON</button>
         </footer>
       </section>
-      <div class="exit-count" aria-live="polite">Counting successful departures…</div>`;
+      <div class="exit-count" aria-live="polite">Counting successful departures…</div>
+      <div class="get-your-own">Get your own <a href="${base}/" target="_blank" rel="noopener">Good Internetting</a> dingus.</div>`;
 
     const content = root.querySelector(".content");
     const footer = root.querySelector("footer");
